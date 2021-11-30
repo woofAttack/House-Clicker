@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{512D3E66-8DD5-747C-FD96-E3A91480040C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -54,12 +53,18 @@
     <UnityVersion>2019.4.30f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Prefabs\SS\PrefabBlock.cs" />
-    <Compile Include="Assets\Scripts\StartPoint.cs" />
-    <Compile Include="Assets\Scripts\InitializerParts.cs" />
-    <Compile Include="Assets\Scripts\ListParts.cs" />
-    <Compile Include="Assets\Scripts\NewDataInitializerParts.cs" />
-    <Compile Include="Assets\Scripts\Part.cs" />
+    <Compile Include="Assets\Prefabs\SS\Scripts\ListPrefabsBlock.cs" />
+    <Compile Include="Assets\Prefabs\SS\Scripts\PrefabBlock.cs" />
+    <Compile Include="Assets\Scripts\Core\ListPartChoose.cs" />
+    <Compile Include="Assets\Scripts\Core\ListParts.cs" />
+    <Compile Include="Assets\Scripts\Core\Part.cs" />
+    <Compile Include="Assets\Scripts\Initialization\InitializerParts.cs" />
+    <Compile Include="Assets\Scripts\Initialization\NewDataInitializerParts.cs" />
+    <Compile Include="Assets\Scripts\Main.cs" />
+    <Compile Include="Assets\Scripts\UITile\BuildBehaviour.cs" />
+    <Compile Include="Assets\Scripts\UITile\UITileListPartsChoose.cs" />
+    <Compile Include="Assets\Scripts\UITile\UITileListPartsChooseBlock.cs" />
+    <Compile Include="Assets\Scripts\UITile\UITilePartChoose.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
