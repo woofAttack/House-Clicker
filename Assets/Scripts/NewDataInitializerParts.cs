@@ -1,13 +1,22 @@
 ﻿using System.Collections.Generic;
 
-public class NewDataInitializerParts<T> : InitializerParts<T> where T : Part
+public class NewDataInitializerBlock : InitializerParts<Block>
 {
-    private List<T> _parts = new List<T>();
+    private List<Block> _parts = new List<Block>();
+    private List<PrefabBlock> _listPrefabs;
+
+    public NewDataInitializerBlock(ListPrefabsBlock listPrefabs)
+    {
+        _listPrefabs = listPrefabs.prefabBlocks;
+    }
 
     private protected override void CreateArrayParts()
     {
-        
+        for (int i = 0, imax = _listPrefabs.Count; i < imax; i++)
+        {
+            _parts.Add(new Block(_listPrefabs[i]));
+        }
     }
 
-    private protected override List<T> ArrayParts() => _parts;
+    private protected override List<Block> ArrayParts() => _parts;
 }
